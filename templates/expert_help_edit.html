@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<style>
+body{
+    background-color: rgb(171, 218, 132);
+}
+h1{
+    color: white;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button{
+    background-color: rgb(207, 76, 24);
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 7%;
+    color: white;
+}
+
+
+div {
+  border-radius: 5px;
+  background-color: #1dbfdb;
+  padding: 20px;
+}
+</style>
+<body>
+
+<h1>Expert Help Table</h1>
+
+<div>
+  <form action="/expert_help_edit/{{sno}}" method="post">
+
+    <label for="lname">expert_Id</label>
+    <input type="text" id="lname" name="expert_id" value="{{experts_help.expert_id}}">
+
+    <label for="lname">expert_name</label>
+    <input type="text" id="lname" name="expert_name" value="{{experts_help.expert_name}}">
+
+    <label for="lname">person</label>
+    <input type="text" id="lname" name="person" value="{{experts_help.person}}">
+
+    <label for="lname">problem</label>
+    <input type="text" id="lname" name="problem" value="{{experts_help.problem}}">
+
+
+    <label for="lname">problem Image</label>
+    <input type="text" id="lname" name="problem_image" value="{experts_help.problem_image}}">
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>

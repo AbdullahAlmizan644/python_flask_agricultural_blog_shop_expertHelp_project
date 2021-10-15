@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<style>
+body{
+    background-color: rgb(171, 218, 132);
+}
+h1{
+    color: white;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button{
+    background-color: rgb(207, 76, 24);
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 7%;
+    color: white;
+}
+
+
+div {
+  border-radius: 5px;
+  background-color: #1dbfdb;
+  padding: 20px;
+}
+</style>
+<body>
+
+<h1>Product Table</h1>
+
+<div>
+  <form action="/product_edit/{{sno}}" method="post">
+
+    <label for="lname">name</label>
+    <input type="text" id="lname" name="product_name" value="{{products.name}}">
+
+    <label for="lname">slug</label>
+    <input type="text" id="lname" name="product_slug" value="{{products.slug}}">
+
+    <label for="lname">image</label>
+    <input type="text" id="lname" name="product_image" value="{{products.image}}">
+
+    <label for="lname">price</label>
+    <input type="text" id="lname" name="product_price" value="{{products.price}}">
+
+    <label for="lname">catagory</label>    
+    <select name="product_catagory" id="catagory" onchange="cat()">
+      <option value="Rent">Rent</option>
+      <option value="Buy">Buy</option>
+    </select>
+    <input type="hidden" value="{{products.catagory}}"  id="catagory_in">
+
+
+    <label for="lname">description</label>
+    <input type="text" id="lname" name="product_description" value="{{products.description}}">
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<script>
+      function cat(){
+        document.getElementById("catagory_in").value=document.getElementsByName("product_catagory")[0].value;
+      }
+</script>
+
+</body>
+</html>

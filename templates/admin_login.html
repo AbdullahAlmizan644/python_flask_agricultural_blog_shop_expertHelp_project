@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;
+      background-color: #4CAF50;
+
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 10%;
+  border-radius: 50%;
+  border: 2px solid rgb(29, 153, 211);
+}
+
+.container {
+  padding: 16px;
+  border: 2px solid green;
+  height: 400px;
+  width: 400px;
+  position: relative;
+  margin: auto;
+  background-color:rgb(5, 22, 95);
+  color: white;
+
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+h1{
+
+  position: relative;
+  left: 510px;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<h1>Admin Login</h1>
+
+<form action="/admin_login" method="POST">
+
+
+  <div class="container">
+    <div class="imgcontainer">
+      <img src={{url_for("static", filename="img/img_avatar2.png")}} alt="Avatar" class="avatar">
+    </div>
+    <label for="form_name"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="form_name" required>
+
+    <label for="form_password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="form_password" required>
+        
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+</form>
+
+</body>
+</html>

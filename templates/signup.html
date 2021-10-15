@@ -1,0 +1,268 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script>
+var stateObject={
+			"Dhaka":{
+				"Dhaka":["Dhamrai","Dohar","Keraniganj","Nawabganj","Savar","Tejgaon Circle"],
+				"Gazipur":["Gazipur Sadar","Kaliakair","Kaliganj","Kapasia","Sreepur"],
+				"Gopalganj":["Gopalganj","Kashiani","Kotalipara","Muksudpur","Tungipara"],
+				"Kishoreganj":["Austagram","Bajitpur","Bhairab","Hossainpur","Itna","Karimganj","Katiadi","Kishoreganj Sadar","Kuliarchar","Mithamain","Nikli","Pakundia","Tarail"],
+				"Madaripur":["Rajoir","Madaripur Sadar","Kalkini","Shibchar"],
+				"Manikganj":["Daulatpur","Ghior","Harirampur","Manikgonj Sadar","Saturia","Shivalaya","Singair"],
+				"Munshiganj":["Gazaria","Lohajang","Munshiganj Sadar","Sirajdikhan","Sreenagar","Tongibari"],
+				"Narayanganj":["Araihazar","Bandar","Narayanganj Sadar","Rupganj","Sonargaon"],
+				"Rajbari":["Baliakandi","Goalandaghat","Pangsha","Rajbari Sadar","Kalukhali"],
+				"Shariatpur":["Bhedarganj","Damudya","Gosairhat","Naria","Shariatpur Sadar","Zajira","Shakhipur"],
+				"Faridpur":["Alfadanga","Bhanga","Boalmari","Charbhadrasan","Faridpur Sadar","Madhukhali","Nagarkanda","Sadarpur","Saltha"],
+				"Tangail":["Gopalpur","Basail","Bhuapur","Delduar","Ghatail","Kalihati","Madhupur","Mirzapur","Nagarpur","Sakhipur","Dhanbari","Tangail Sadar"],
+				"Narsingdi":["Narsingdi Sadar","Belabo","Monohardi","Palash","Raipura","Shibpur"],
+			},
+
+			"Chattogram":{
+				"Bandarban":["Ali Kadam","Bandarban Sadar","Lama","Naikhongchhari","Rowangchhari","Ruma","Thanchi"],
+				"Brahmanbaria":["Akhaura","Bancharampur","Brahmanbaria Sadar","Kasba","Nabinagar","Nasirnagar","Sarail","Ashuganj","Bijoynagar"],
+				"Chandpur":["Chandpur Sadar","Faridganj","Haimchar","Haziganj","Kachua","Matlab Dakshin","Matlab Uttar","Shahrasti"],
+				"Chattogram":["Anwara","Banshkhali","Boalkhali","Chandanaish","Fatikchhari","Hathazari","Karnaphuli","Lohagara","Mirsharai","Patiya","Rangunia","Raozan","Sandwip","Satkania","Sitakunda"],
+				"Cumilla":["Barura","Brahmanpara","Burichang","Chandina","Chauddagram","Daudkandi","Debidwar","Homna","Laksam","Lalmai","Muradnagar","Nangalkot","Cumilla Adarsha Sadar","Meghna","Titas","Monohargonj","Cumilla Sadar Dakshin"],
+				"Cox's Bazar":["Chakaria","Cox's Bazar Sadar","Kutubdia","Maheshkhali","Ramu","Teknaf","Ukhia","Pekua"],
+				"Feni":["Chhagalnaiya","Daganbhuiyan","Feni Sadar","Parshuram","Sonagazi","Fulgazi"],
+				"Khagrachhari":["Dighinala","Khagrachhari","Lakshmichhari","Mahalchhari","Manikchhari","Matiranga","Panchhari","Ramgarh"],
+				"Lakshmipur":["Lakshmipur Sadar","Raipur","Ramganj","Ramgati","Kamalnagar"],
+				"Noakhali":["Begumganj","Noakhali Sadar","Chatkhil","Companiganj","Hatiya","Senbagh","Sonaimuri","Subarnachar","Kabirhat"],
+				"Rangamati":["Bagaichhari","Barkal","Kawkhali (Betbunia)","Belaichhari","Kaptai","Juraichhari","Langadu","Naniyachar","Rajasthali","Rangamati Sadar"],
+			},
+
+			"Rajshahi":{
+				"Joypurhat":["Akkelpur","Joypurhat Sadar","Kalai","Khetlal","Panchbibi"],
+				"Bogura":["Adamdighi","Bogura Sadar","Dhunat","Dhupchanchia","Gabtali","Kahaloo","Nandigram","Sariakandi","Shajahanpur","Sherpur","Shibganj Upazila","Sonatola Upazila"],
+				"Naogaon":["Atrai","Badalgachhi","Manda","Dhamoirhat","Mohadevpur","Naogaon Sadar","Niamatpur","Patnitala","Porsha","Raninagar","Sapahar"],
+				"Natore":["Bagatipara","Baraigram","Gurudaspur","Lalpur","Natore Sadar","Singra","Naldanga"],
+				"Nawabganj":["Bholahat","Gomastapur","Nachole","Nawabganj Sadar","Shibganj"],
+				"Pabna":["Atgharia","Bera","Bhangura","Chatmohar","Faridpur","Ishwardi","Pabna Sadar","Santhia","Sujanagar"],
+				"Sirajganj":["Ullahpara","Belkuchi","Chauhali","Kamarkhanda","Kazipur","Raiganj","Shahjadpur","Sirajganj Sadar","Tarash"],
+				"Rajshahi":["Bagha","Bagmara","Charghat","Durgapur","Godagari","Mohanpur","Paba","Puthia","Tanore"]
+			},
+			"Rangpur":{
+				"Dinajpur":["Birampur","Birganj","Biral","Bochaganj","Chirirbandar","Phulbari","Ghoraghat","Hakimpur","Kaharole","Khansama","Dinajpur Sadar","Nawabganj","Parbatipur"],
+				"Gaibandha":["Phulchhari","Gaibandha Sadar","Gobindaganj","Palashbari","Sadullapur","Sughatta","Sundarganj"],
+				"Kurigram":["Bhurungamari","Char Rajibpur","Chilmari","Phulbari","Kurigram","Nageshwari","Rajarhat","Raomari","Ulipur"],
+				"Lalmonirhat":["Aditmari","Hatibandha","Kaliganj","Lalmonirhat Sadar","Patgram"],
+				"Nilphamari":["Dimla","Domar","Jaldhaka","Kishoreganj","Nilphamari Sadar","Saidpur"],
+				"Panchagarh":["Atwari","Boda","Debiganj","Panchagarh Sadar","Tetulia"],
+				"Rangpur":["Badarganj","Gangachhara","Kaunia","Rangpur Sadar","Mithapukur","Pirgachha","Pirganj","Taraganj"],
+				"Thakurgaon":["Baliadangi","Haripur","Pirganj","Ranisankail","Thakurgaon Sadar"]
+
+			},
+			"Mymensingh":{
+				"Netrokona":["Atpara","Barhatta","Durgapur","Khaliajuri","Kalmakanda","Kendua","Madan","Mohanganj","Netrokona Sadar","Purbadhala"],
+				"Sherpur":["Jhenaigati","Nakla","Nalitabari","Sherpur Sadar","Sreebardi"],
+				"Jamalpur":["Baksiganj","Dewanganj","Islampur","Jamalpur","Madarganj","Melandaha","Sarishabari"],
+				"Mymensingh":["Trishal","Dhobaura","Fulbaria","Gafargaon","Gauripur","Haluaghat","Ishwarganj","Mymensingh Sadar","Muktagachha","Nandail","Phulpur","Bhaluka","Tara Khanda"]
+			},
+			"Barishal":{
+				"Barguna":["Amtali","Bamna","Barguna Sadar","Betagi","Patharghata","Taltali"],
+				"Barishal":["Agailjhara","Babuganj","Bakerganj","Banaripara","Gaurnadi","Hizla","Barishal Sadar","Mehendiganj","Muladi","Wazirpur"],
+				"Bhola":["Bhola Sadar","Burhanuddin","Char Fasson","Daulatkhan","Lalmohan","Manpura","Tazumuddin"],
+				"Jhalokati":["Jhalokati Sadar","Kathalia","Nalchity","Rajapur"],
+				"Patuakhali":["Bauphal","Dashmina","Galachipa","Kalapara","Mirzaganj","Patuakhali","Rangabali","Dumki"],
+				"Pirojpur":["Bhandaria","Kawkhali","Mathbaria","Nazirpur","Pirojpur Sadar","Nesarabad (Swarupkati)","Indurkani"]
+			},
+			
+			
+			"Khulna":{
+				"Bagerhat":["Bagerhat Sadar","Chitalmari","Fakirhat","Kachua","Mollahat","Mongla","Morrelganj","Rampal","Sarankhola"],
+				"Chuadanga":["Alamdanga","Chuadanga Sadar","Damurhuda","Jibannagar"],
+				"Jashore":["Abhaynagar","Bagherpara","Chaugachha","Jhikargachha","Keshabpur","Jashore Sadar","Manirampur","Sharsha"],
+				"Jhenaida":["Harinakunda","Jhenaidah Sadar","Kaliganj","Kotchandpur","Maheshpur","Shailkupa"],
+				"Khulna":["Batiaghata","Dacope","Dumuria","Dighalia","Koyra","Paikgachha","Phultala","Rupsha","Terokhada"],
+				"Kushtia":["Bheramara","Daulatpur","Khoksa","Kumarkhali","Kushtia Sadar","Mirpur"],
+				"Magura":["Magura Sadar","Mohammadpur","Shalikha","Sreepur"],
+				"Meherpur":["Gangni","Meherpur Sadar","Mujibnagar"],
+				"Narail":["Kalia","Lohagara","Narail Sadar","Naragati"],
+				"Satkhira":["Assasuni","Debhata","Kalaroa","Kaliganj","Satkhira Sadar","Shyamnagar","Tala"],
+
+			},
+			"Sylhet":{
+				"Habiganj":["Ajmiriganj","Bahubal","Baniyachong","Chunarughat","Habiganj Sadar","Lakhai","Madhabpur","Nabiganj","Sayestaganj"],
+				"Moulvibazar":["Barlekha","Juri","Kamalganj","Kulaura","Moulvibazar Sadar","Rajnagar","Sreemangal"],
+				"Sunamganj":["Bishwamvarpur","Chhatak","Dakshin Sunamganj","Derai","Dharamapasha","Dowarabazar","Jagannathpur","Jamalganj","Sullah","Sunamganj Sadar","Tahirpur"],
+				"Sylhet":["Balaganj","Beanibazar","Bishwanath","Companigonj","Dakshin Surma","Fenchuganj","Golapganj","Gowainghat","Jaintiapur","Kanaighat","Osmani Nagar","Sylhet Sadar"]
+			}
+
+		}	
+window.onload = function () {
+var countySel = document.getElementById("countySel"),
+stateSel = document.getElementById("stateSel"),
+districtSel = document.getElementById("districtSel");
+for (var country in stateObject) {
+countySel.options[countySel.options.length] = new Option(country, country);
+}
+countySel.onchange = function () {
+stateSel.length = 1; // remove all options bar first
+districtSel.length = 1; // remove all options bar first
+if (this.selectedIndex < 1) return; // done 
+for (var state in stateObject[this.value]) {
+stateSel.options[stateSel.options.length] = new Option(state, state);
+}
+}
+countySel.onchange(); // reset in case page is reloaded
+stateSel.onchange = function () {
+districtSel.length = 1; // remove all options bar first
+if (this.selectedIndex < 1) return; // done 
+var district = stateObject[countySel.value][this.value];
+for (var i = 0; i < district.length; i++) {
+districtSel.options[districtSel.options.length] = new Option(district[i], district[i]);
+}
+}
+}
+</script>
+
+
+
+
+
+<style>
+	body{
+		background-color: rgb(97, 221, 169);
+	}
+
+	.box{
+		
+	}
+
+	.container{
+		width: 600px;
+		height: 420px;
+		position: relative;
+		background-color: teal;
+		color: white;
+		left: 200px;
+		top: 20px;
+		padding-left: 20px;
+		padding-top: 20px;
+	}
+	.container input{
+		width: 200px;
+		height: auto;
+
+
+	}
+	select{
+		width: 100px;
+		height: auto;
+
+	}
+	#check{
+		width: 10px;
+		height: 10px;
+	}
+	#last{
+		position: relative;
+		left: 250px;
+		bottom: 22px;
+	}
+	#mobile{
+		position: relative;
+		left: 250px;
+		bottom: 22px;
+	}
+	#confirm{
+		position: relative;
+		left: 250px;
+		bottom: 22px;
+	}
+	#countrySel{
+		position: relative;
+		left: 10px;
+
+	}
+	#distric_label{
+		position: relative;
+		left: 190px;
+		bottom: 18px;
+	}
+	#stateSel{
+		position: relative;
+		left: 200px;
+		bottom: 18px;
+	}
+	#subdistric_label{
+		position: relative;
+		left: 370px;
+		bottom: 36px;
+	}
+	#districtSel{
+		position: relative;
+		left: 380px;
+		bottom: 36px;
+	}
+	a{
+		text-decoration: none;
+		color:rgb(97, 221, 169);
+	}
+	button{
+		border: none;
+		width: 80px;
+		height: 30px;
+		margin-top: 10px;
+		background-color: yellowgreen;
+	}
+	.gender_class{
+		position: relative;
+		right: 100px;
+	}
+</style>
+
+</head>
+<body>
+	<div class="box">
+        <div class="container">
+			<form name="myform" id="myForm" action="/signup" method="POST">
+                <h1>Sign Up</h1>
+                <p>Please fill in this form to create an account</p>
+                <hr>
+                <input type="text" placeholder=" FirstName" id="first" name="box_first_name">
+                <br>
+                <input type="text" placeholder=" LastName" id="last" name="box_last_name">
+                <br>
+                <input type="email" placeholder=" Email" id="email" name="box_email">
+                <br>
+                <input type="text" placeholder="Mobile Number" id="mobile" name="box_mobile">
+                <br>
+                <input type="password" placeholder=" Password" id="password" name="box_password">
+                <br>
+                <input type="password" placeholder="Confirm Password" id="confirm" name="password">
+                <br>
+				<div class="gender_class">
+					<label for=""><input type="radio" id="" name="box_gender" value="male">Male</label>
+					<label for=""><input type="radio" id="" name="box_gender" value="female">Female</label>
+					<label for=""><input type="radio" id="" name="box_gender" value="other">Other</label>
+				</div>
+                <br>
+                <label for="" id="">Division:</label>
+			    <select name="box_division" id="countySel" size="1">
+				<option value="" selected="selected">Select Division</option>
+				</select>
+				<br>
+                <label for="" id="distric_label">District:</label>
+				<select name="box_district" id="stateSel" size="1">
+				<option value="" selected="selected">Please select Division first</option>
+				</select>
+				<br>
+                <label for="" id="subdistric_label">Upozila:</label>
+                <select name="box_upozila" id="districtSel" size="1">
+                    <option value="" selected="selected">select upozila</option>
+                </select>
+                <br>
+                <input type="checkbox" id="check" name="vehicle1">
+                <label for="vehicle1"> I accept the <a href="#">Terms</a> of Use & <a href="#">Privacy Policy</a></label>
+                <br>
+                <button>Sign Up</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

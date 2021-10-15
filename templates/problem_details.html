@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<br>
+<br>
+<hr>
+{% set image_name="/img" + problems.problem_image %}
+<div class="col-lg-9">
+  <div class="card mt-4">
+    <h3>Problem Image</h3>
+    <img class="card-img-top img-fluid" src={{ url_for("static", filename=image_name)}} width="900" height="400" alt="">
+    <div class="card-body">
+    </div>
+  </div>
+  <!-- /.card -->
+
+  <div class="card card-outline-secondary my-4">
+    <div class="card-header">
+      
+    </div>
+      <div class="card-body">
+        <h2>Problem Details</h2>
+        <small>Send by {{problems.person}}</small>
+        <p>{{problems.problem}}</p>
+        
+        <hr>
+
+      </div>
+  </div>
+  <!-- /.card -->
+
+</div>
+<!-- /.col-lg-9 -->
+
+</div>
+
+</div>
+<!-- /.container -->
+
+{% endblock %}

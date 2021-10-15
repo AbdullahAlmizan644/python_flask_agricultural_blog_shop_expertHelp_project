@@ -1,0 +1,103 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<br>
+<br>
+<hr>  
+  <div class="container-fluid">
+    <div class="row">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <div class="position-sticky pt-3">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/product_table">
+                <span data-feather="home"></span>
+                Product
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="post_table">
+                <span data-feather="file"></span>
+                Post
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/user_table">
+                <span data-feather="shopping-cart"></span>
+                user
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/expert_table">
+                <span data-feather="bar-chart-2"></span>
+                expert
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/expert_help_table">
+                <span data-feather="layers"></span>
+                Expert Help
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/order_table">
+                <span data-feather="layers"></span>
+                Order
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/approval_table">
+                <span data-feather="layers"></span>
+                Approve
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">  
+        <h2>User Managment</h2>
+        <br>
+        <div class="table-responsive">
+          <table class="table table-striped table-sm">
+            <thead>
+              <tr>
+                <th>Serial no</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Password</th>
+                <th>Gender</th>
+                <th>Division</th>
+                <th>District</th>
+                <th>Upozila</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+{% for user in users %}
+              <tr>
+                <td>{{user.sno}}</td>
+                <td>{{user.first_name}}</td>
+                <td>{{user.last_name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.mobile}}</td>
+                <td>{{user.password}}</td>
+                <td>{{user.gender}}</td>
+                <td>{{user.division}}</td>
+                <td>{{user.district}}</td>
+                <td>{{user.upozila}}</td>
+                <td><a href="/user_edit/{{user.sno}}"><button type="button" class="btn btn-info">edit</button></a></td>
+                <td><a href="/delete_user/{{user.sno}}"><button type="button" class="btn btn-warning">delete</button></a></td>
+              </tr>
+{% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+  </div>
+
+{% endblock %}

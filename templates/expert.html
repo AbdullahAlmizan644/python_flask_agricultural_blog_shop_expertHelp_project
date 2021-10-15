@@ -1,0 +1,38 @@
+{% extends "layout.html"%}
+{% block content%}
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url(  {{url_for('static', filename='img/contact-bg.jpg')}}   )">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>Expert Help</h1>
+            <span class="subheading">Have questions? I have answers.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+{% for person in expert %}
+{% set image_name="img/"+person.image%}
+
+<div class="col-lg-4 col-md-6 mb-4" id="karim">
+  <div class="card h-100">
+    <a href="/expert_details/{{person.id}}"><img class="card-img-top" src={{url_for("static", filename=image_name)}} width="700" height="300" alt=""></a>
+    <div class="card-body">
+      <h4 class="card-title">
+        <a href="/expert_details/{{person.id}}" >{{person.name}}</a>
+      </h4>
+      <h5>{{person.education}}</h5>
+      <h5>workspace:{{person.workspace}} research:{{person.research}}</h5>
+      <p class="card-text"> </p>
+    </div>
+  </div>
+</div>
+
+  {% endfor %}
+
+  {% endblock %}

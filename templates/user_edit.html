@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<style>
+body{
+    background-color: rgb(171, 218, 132);
+}
+h1{
+    color: white;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button{
+    background-color: rgb(207, 76, 24);
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 7%;
+    color: white;
+}
+
+
+div {
+  border-radius: 5px;
+  background-color: #1dbfdb;
+  padding: 20px;
+}
+</style>
+<body>
+
+<h1>Product Table</h1>
+
+<div>
+  <form action="/user_edit/{{sno}}" method="post">
+
+    <label for="lname">First name</label>
+    <input type="text" id="lname" name="product_name" value="{{users.first_name}}">
+
+    <label for="lname">Last name</label>
+    <input type="text" id="lname" name="product_name" value="{{users.last_name}}">
+
+    <label for="lname">email</label>
+    <input type="text" id="lname" name="product_slug" value="{{users.email}}">
+
+    <label for="lname">mobile</label>
+    <input type="text" id="lname" name="product_image" value="{{users.mobile}}">
+
+    <label for="lname">password</label>
+    <input type="text" id="lname" name="product_price" value="{{users.password}}">
+
+    <label for="lname">Division</label>
+    <input type="text" id="lname" name="product_price" value="{{users.division}}">
+
+    <label for="lname">District</label>
+    <input type="text" id="lname" name="product_price" value="{{users.district}}">
+
+    <label for="lname">upozila</label>
+    <input type="text" id="lname" name="product_description" value="{{users.upozila}}">
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+
+</body>
+</html>

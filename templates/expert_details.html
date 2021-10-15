@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<br>
+<br>
+<hr>
+
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <div class="row">
+  
+        <div class="col-lg-3">
+  
+          <h1 class="my-4">Expert Details</h1>
+  
+        </div>
+        <!-- /.col-lg-3 -->
+
+
+  {% set image_name="img/"+expert.image %}
+      <div class="col-lg-9">
+
+        <div class="card mt-4">
+          <img class="card-img-top img-fluid" src={{url_for("static", filename=image_name)}} width="900" height="300" alt="">
+          <div class="card-body">
+            <h3 class="card-title">{{expert.name}}</h3>
+            <p>Education:{{expert.education}}</p>
+            <p>Research On: {{expert.research}}</p>
+            <small class="text-muted">Workspace: {{expert.workspace}}</small>
+          </div>
+        </div>
+        <!-- /.card -->
+
+        <div class="card card-outline-secondary my-4">
+          <div class="card-header">
+            
+          </div>
+          <form action="/expert_details/{{expert.id}}" method="post">
+          <div class="card-body">
+            <label>Message</label>
+            <textarea rows="5" name="help_message" class="form-control" placeholder="Write your problem beriefly......" id="message" name="message" required data-validation-required-message="Please enter a message."></textarea>
+            <br>
+            <label>Upload Problem Image: </label>
+            <input type="text" name="help_image">
+            <br>
+            <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
+          </form>
+          </div>
+        </div>
+        <!-- /.card -->
+
+      </div>
+      <!-- /.col-lg-9 -->
+
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+
+
+{% endblock %}

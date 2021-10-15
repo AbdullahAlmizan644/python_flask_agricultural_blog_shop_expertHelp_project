@@ -1,0 +1,35 @@
+{% extends "layout.html"%}
+{% block content%}
+
+<br>
+<br>
+
+<hr>
+{% for post in blog%}
+{% if "1" in post.active%}
+<!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <div class="post-preview">
+        <a href="/post/{{post.slug}}">
+          <h2 class="post-title">
+          {{post.title}}
+          </h2>
+          <h3 class="post-subtitle">
+           {{post.tagline}}
+          </h3>
+        </a>
+        <p class="post-meta">Posted by
+         {{post.post_by}}
+          {{post.date}}</p>
+      </div>
+      <hr>
+      <!-- Pager -->
+    </div>
+  </div>
+</div>
+{% endif %}
+{% endfor %}
+
+{% endblock %}

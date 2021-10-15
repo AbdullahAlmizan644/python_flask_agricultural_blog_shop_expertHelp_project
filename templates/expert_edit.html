@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<style>
+body{
+    background-color: rgb(171, 218, 132);
+}
+h1{
+    color: white;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button{
+    background-color: rgb(207, 76, 24);
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 7%;
+    color: white;
+}
+
+
+div {
+  border-radius: 5px;
+  background-color: #1dbfdb;
+  padding: 20px;
+}
+</style>
+<body>
+
+<h1>Post Table</h1>
+
+<div>
+  <form action="/expert_edit/{{id}}" method="post">
+
+    <label for="lname">Id</label>
+    <input type="text" id="lname" name="post_title" value="{{experts.id}}">
+
+    <label for="lname">name</label>
+    <input type="text" id="lname" name="post_slug" value="{{experts.name}}">
+
+    <label for="lname">phone</label>
+    <input type="text" id="lname" name="post_tagline" value="{{experts.phone}}">
+
+    <label for="lname">image</label>
+    <input type="text" id="lname" name="post_content" value="{{experts.image}}">
+
+    <label for="lname">address</label>
+    <input type="text" id="lname" name="post_image" value="{{experts.address}}">
+
+    <label for="lname">workspace</label>
+    <input type="text" id="lname" name="post_image" value="{{experts.workspace}}">
+
+    <label for="lname">research</label>
+    <input type="text" id="lname" name="post_image" value="{{experts.research}}">
+
+    <label for="lname">education</label>
+    <input type="text" id="lname" name="post_image" value="{{experts.education}}">
+
+    <label for="lname">username</label>
+    <input type="text" id="lname" name="post_image" value="{{experts.username}}">
+
+
+    <label for="lname">password</label>
+    <input type="text" id="lname" name="post_image" value="{{experts.password}}">
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>

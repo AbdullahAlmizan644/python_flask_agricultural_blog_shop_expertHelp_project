@@ -1,0 +1,65 @@
+@charset "utf-8";
+	.image2
+{
+	background-image : url(image2.png);
+	background-repeat : no-repeat;
+	position : absolute ;
+	left : 2410px;
+	top : 1486px;
+	width : 1025px;
+	height : 769px;
+}
+.st0
+{
+	background : #18232C;
+	background : rgba(24, 35, 44, 1);
+	opacity : 0.46;
+	position : absolute ;
+	left : 1552px;
+	top : 550px;
+	width : 567px;
+	height : 383px;
+	filter: alpha(opacity=46) progid:DXImageTransform.Microsoft.Alpha(opacity=46) ;
+}
+.st1
+{
+	position : absolute ;
+	left : -1652px;
+	top : 376px;
+	width : 567px;
+	height : 383px;
+}
+.st2
+{
+	background : #7B7C7C;
+	background : rgba(123, 124, 124, 1);
+	opacity : 0;
+	position : absolute ;
+	left : 0px;
+	top : 0px;
+	width : 1023px;
+	height : 768px;
+	filter: alpha(opacity=0) progid:DXImageTransform.Microsoft.Alpha(opacity=0) ;
+}
+.image1
+{
+	background-image : url(image1.png);
+	background-repeat : no-repeat;
+	position : absolute ;
+	left : 0px;
+	top : 0px;
+	width : 1024px;
+	height : 768px;
+}
+.image
+{
+	background-image : url(image.png);
+	background-repeat : no-repeat;
+	opacity : 0.67;
+	position : absolute ;
+	left : 228px;
+	top : 192px;
+	width : 568px;
+	height : 384px;
+	filter: alpha(opacity=67) progid:DXImageTransform.Microsoft.Alpha(opacity=67) ;
+}

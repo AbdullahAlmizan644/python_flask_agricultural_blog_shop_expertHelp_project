@@ -1,0 +1,35 @@
+{% extends "layout.html"%}
+{% block content%}
+
+<!-- Page Header -->
+{% set chobi = "img/"+"{{blog.image}}" %}
+
+<header class="masthead" style="background-image: url(  {{url_for('static', filename=chobi )}}   )">
+  <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+              <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="post-heading">
+                  <h1>{{blog.title}}</h1>
+                  <h2 class="subheading">{{blog.tagline}}</h2>
+                  <span class="meta">Posted by
+                    <a href="#">{{blog.post_by}}</a>
+                    {{blog.date}}</span>
+                </div>
+          </div>
+      </div>
+  </div>
+</header>
+
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        {{blog.content}}
+      </div>
+    </div>
+  </div>
+</article>
+
+{% endblock %}

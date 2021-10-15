@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<br>
+<br>
+<hr>
+<div class="container">
+    <div class="py-5 text-center">
+      <h2>Confirm your order</h2>
+      <p class="lead">please enter your information</p>
+    </div>
+          <form action="/order/{{order.sno}}" method="POST">
+            <h4 class="mb-3">Payment</h4>
+
+            <div class="d-block my-3">
+              <div class="custom-control custom-radio">
+                <input id="credit" type="radio" name="user_payment_method" value="cash on delivery"
+                class="custom-control-input" checked required>
+                <label class="custom-control-label" for="credit">Cash On Delivery</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input id="debit"  type="radio" name="user_payment_method" value="Bikash" class="custom-control-input" required>
+                <label class="custom-control-label" for="debit">Bikash</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input id="paypal"  type="radio" value="roket" name="user_payment_method" class="custom-control-input" required>
+                <label class="custom-control-label" for="paypal">Roket</label>
+              </div>
+            </div>
+            
+          <hr class="mb-4">
+          <button class="btn btn-primary btn-lg btn-block" type="submit">Confirm Order</button>
+        </form>
+      </div>
+    </div>
+
+
+{% endblock %}

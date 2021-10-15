@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: darkcyan;
+            color: white;
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+        }
+        *{
+            box-sizing: border-box;
+        }
+
+        .container0{
+            height: 350px;
+            display: inline-block;
+            float: left;
+            position: relative;
+            top: 50px;
+            padding-left: 70px;
+            padding-top: 50px;
+
+
+        }
+        .container1{
+            height: 350px;
+            float: left;
+            position: relative;
+            top: 50px;
+            padding: 10px;
+            font: bold;
+            
+        }
+        .grid1{
+            width: 50%;
+        }
+        .grid2{
+            width: 50%;
+        }
+
+        input{
+            height: 30px;
+            width: 300px;
+            display: block;
+            border: 2px solid white;
+            border-radius: 2px;
+           
+        }
+
+        .btn{
+            background-color: rgb(73, 153, 58);
+            border-radius: 10%;
+            border: 2px solid gray;
+            height: 45px;
+            width: 110px;
+            color: white;
+        }
+        img{
+            height: 250px;
+            width: 400px;
+        }
+        .imagediv{
+            height: 250px;
+            width: 400px;
+            box-shadow:3px 3px 15px rgb(203, 211, 211);
+            overflow: hidden;
+        }
+        span,a{
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <div>
+    
+        <form action="/expert_login" method="post">
+            <div class="container0 grid1">
+                <h1>Expert Login</h1>
+                <label for="name"> <b>username</b>  </label>
+                <input type="text" placeholder="username" name="form_username">
+                <br>
+                <label> <b>Password</b>  </label>
+                <input type="Password" placeholder="Password" name="form_password">
+                <br>
+                <label for=""><a href="#">Forget Password?</a> <span>OR</span> <a href="/signup"> Sign Up</a></label>
+                <br><br>
+                <button class="btn">Submit</button>
+
+            </div>
+        </form>
+
+        <div class="container1 grid2">
+            <h3>Save Earth from pollution</h3>
+            <div class="imagediv">
+                <img src={{url_for("static", filename="img/warming.png")}} alt="">
+            </div>
+           
+        </div>
+
+    </div>
+
+
+</body>
+</html>
